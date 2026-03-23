@@ -214,11 +214,7 @@ static void draw_needle(lv_obj_t *canvas, const struct status_state *state) {
 }
 #endif // IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_SPEEDOMETER)
 
-#if IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_LUNA) ||                                                \
-    IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_BONGO_CAT) ||                                           \
-    IS_ENABLED(CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS_FIXED) ||                              \
-    !IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_GRAPH)
-#else
+#if IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_GRAPH)
 static void draw_grid(lv_obj_t *canvas) {
     lv_draw_img_dsc_t img_dsc;
     lv_draw_img_dsc_init(&img_dsc);
