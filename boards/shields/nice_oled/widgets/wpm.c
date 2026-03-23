@@ -325,11 +325,7 @@ void draw_wpm_status(lv_obj_t *canvas, const struct status_state *state) {
     draw_gauge(canvas, state);
     draw_needle(canvas, state);
 #endif // IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_SPEEDOMETER)
-#if IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_LUNA) ||                                                \
-    IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_BONGO_CAT) ||                                           \
-    IS_ENABLED(CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS_FIXED) ||                              \
-    !IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_GRAPH)
-#else
+#if IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM_GRAPH)
     draw_grid(canvas);
     draw_graph(canvas, state);
 #endif
